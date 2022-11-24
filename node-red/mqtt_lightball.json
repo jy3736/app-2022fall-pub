@@ -1,0 +1,369 @@
+[
+    {
+        "id": "019d2feeaa13b06c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5477330a11eb8513",
+        "type": "mqtt in",
+        "z": "019d2feeaa13b06c",
+        "name": "",
+        "topic": "P306/1",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "184a238d8a2650a1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "1918353fe9f26061",
+                "9965c83422acd52d"
+            ]
+        ]
+    },
+    {
+        "id": "895a428f4d4fc6ba",
+        "type": "mqtt out",
+        "z": "019d2feeaa13b06c",
+        "name": "",
+        "topic": "P306/1",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "184a238d8a2650a1",
+        "x": 880,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1918353fe9f26061",
+        "type": "debug",
+        "z": "019d2feeaa13b06c",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 880,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f2b53f90b668867d",
+        "type": "inject",
+        "z": "019d2feeaa13b06c",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON/lighton.png",
+        "payloadType": "str",
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "895a428f4d4fc6ba"
+            ]
+        ]
+    },
+    {
+        "id": "360e12423560311a",
+        "type": "inject",
+        "z": "019d2feeaa13b06c",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off/lightoff.png",
+        "payloadType": "str",
+        "x": 610,
+        "y": 460,
+        "wires": [
+            [
+                "895a428f4d4fc6ba"
+            ]
+        ]
+    },
+    {
+        "id": "9965c83422acd52d",
+        "type": "ui_media",
+        "z": "019d2feeaa13b06c",
+        "group": "f268903955b3f793",
+        "name": "",
+        "width": "2",
+        "height": "2",
+        "order": 0,
+        "category": "OFF",
+        "file": "lightoff.png",
+        "layout": "adjust",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 870,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2be4625e01eeb081",
+        "type": "mqtt in",
+        "z": "019d2feeaa13b06c",
+        "name": "",
+        "topic": "P306/2",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "184a238d8a2650a1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 590,
+        "y": 240,
+        "wires": [
+            [
+                "6553dfb3084c7e50",
+                "e140516949daf9f1"
+            ]
+        ]
+    },
+    {
+        "id": "6553dfb3084c7e50",
+        "type": "debug",
+        "z": "019d2feeaa13b06c",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 880,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e140516949daf9f1",
+        "type": "ui_media",
+        "z": "019d2feeaa13b06c",
+        "group": "f268903955b3f793",
+        "name": "",
+        "width": "2",
+        "height": "2",
+        "order": 0,
+        "category": "OFF",
+        "file": "lightoff.png",
+        "layout": "adjust",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 870,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1e746c3350258b5",
+        "type": "mqtt out",
+        "z": "019d2feeaa13b06c",
+        "name": "",
+        "topic": "P306/2",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "184a238d8a2650a1",
+        "x": 880,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a21d8b43c199e40a",
+        "type": "inject",
+        "z": "019d2feeaa13b06c",
+        "name": "ON",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON/lighton.png",
+        "payloadType": "str",
+        "x": 610,
+        "y": 640,
+        "wires": [
+            [
+                "a1e746c3350258b5"
+            ]
+        ]
+    },
+    {
+        "id": "cf41cb0d3e6adf9e",
+        "type": "inject",
+        "z": "019d2feeaa13b06c",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off/lightoff.png",
+        "payloadType": "str",
+        "x": 610,
+        "y": 700,
+        "wires": [
+            [
+                "a1e746c3350258b5"
+            ]
+        ]
+    },
+    {
+        "id": "e0cdde83055547d7",
+        "type": "inject",
+        "z": "019d2feeaa13b06c",
+        "name": "ALL ON",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON/lighton.png",
+        "payloadType": "str",
+        "x": 610,
+        "y": 520,
+        "wires": [
+            [
+                "895a428f4d4fc6ba",
+                "a1e746c3350258b5"
+            ]
+        ]
+    },
+    {
+        "id": "ff3b9faa13518af8",
+        "type": "inject",
+        "z": "019d2feeaa13b06c",
+        "name": "ALL OFF",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off/lightoff.png",
+        "payloadType": "str",
+        "x": 620,
+        "y": 580,
+        "wires": [
+            [
+                "a1e746c3350258b5",
+                "895a428f4d4fc6ba"
+            ]
+        ]
+    },
+    {
+        "id": "184a238d8a2650a1",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.makercloud.scaleinnotech.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f268903955b3f793",
+        "type": "ui_group",
+        "name": "Office",
+        "tab": "702023203c7c359e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "702023203c7c359e",
+        "type": "ui_tab",
+        "name": "P306",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]

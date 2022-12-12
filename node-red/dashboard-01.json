@@ -1,0 +1,577 @@
+[
+    {
+        "id": "d5eec157295204f4",
+        "type": "tab",
+        "label": "P306",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8ec688ca9980c392",
+        "type": "ui_button",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "group": "fcb7eba766762a75",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Subscribe",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "subscribe",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 80,
+        "wires": [
+            [
+                "b196ba79b318c580"
+            ]
+        ]
+    },
+    {
+        "id": "1d90660cfb923cae",
+        "type": "ui_gauge",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "group": "fcb7eba766762a75",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "300",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 890,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "517caee5ce432283",
+        "type": "mqtt in",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "67f9ce7ba9814c9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 670,
+        "y": 80,
+        "wires": [
+            [
+                "1d90660cfb923cae"
+            ]
+        ]
+    },
+    {
+        "id": "b196ba79b318c580",
+        "type": "change",
+        "z": "d5eec157295204f4",
+        "name": "/P306/roaster/1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "subscribe",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "/P306/roaster/1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 80,
+        "wires": [
+            [
+                "517caee5ce432283"
+            ]
+        ]
+    },
+    {
+        "id": "5ab83270f1341c81",
+        "type": "ui_button",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "group": "fcb7eba766762a75",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Unsubscribe",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "unsubscribe",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "057a5134b782c2de"
+            ]
+        ]
+    },
+    {
+        "id": "057a5134b782c2de",
+        "type": "change",
+        "z": "d5eec157295204f4",
+        "name": "/P306/roaster/1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "unsubscribe",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "/P306/roaster/1",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 180,
+        "wires": [
+            [
+                "517caee5ce432283",
+                "1d90660cfb923cae"
+            ]
+        ]
+    },
+    {
+        "id": "a6730fe0af3dc62d",
+        "type": "mqtt out",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "topic": "/P306/roaster/1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "67f9ce7ba9814c9f",
+        "x": 480,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7106842a55a72681",
+        "type": "inject",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "(\t    $minimum := 100;\t    $maximum := 300;\t    $round(($random() * ($maximum-$minimum)) + $minimum, 0)\t)",
+        "payloadType": "jsonata",
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "a6730fe0af3dc62d"
+            ]
+        ]
+    },
+    {
+        "id": "3a83bf128b493a02",
+        "type": "ui_button",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "group": "a5e2887b0d127a72",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Subscribe",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "subscribe",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "7bd7037e4b85d07b"
+            ]
+        ]
+    },
+    {
+        "id": "cc87e9b91cdc3c23",
+        "type": "ui_gauge",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "group": "a5e2887b0d127a72",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "300",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 910,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "410c722f95023219",
+        "type": "mqtt in",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "67f9ce7ba9814c9f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "062e4465984b0876",
+                "cc87e9b91cdc3c23"
+            ]
+        ]
+    },
+    {
+        "id": "7bd7037e4b85d07b",
+        "type": "change",
+        "z": "d5eec157295204f4",
+        "name": "/P306/roaster/2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "subscribe",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "/P306/roaster/2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 280,
+        "wires": [
+            [
+                "410c722f95023219"
+            ]
+        ]
+    },
+    {
+        "id": "b5940268e9c607dc",
+        "type": "ui_button",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "group": "a5e2887b0d127a72",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Unsubscribe",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "unsubscribe",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "fee5c72b4ab3efdb"
+            ]
+        ]
+    },
+    {
+        "id": "fee5c72b4ab3efdb",
+        "type": "change",
+        "z": "d5eec157295204f4",
+        "name": "/P306/roaster/2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "unsubscribe",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "/P306/roaster/2",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "410c722f95023219",
+                "cc87e9b91cdc3c23"
+            ]
+        ]
+    },
+    {
+        "id": "360e41fd75081a50",
+        "type": "mqtt out",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "topic": "/P306/roaster/2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "67f9ce7ba9814c9f",
+        "x": 480,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f823c40553649dab",
+        "type": "inject",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "(\t    $minimum := 50;\t    $maximum := 250;\t    $round(($random() * ($maximum-$minimum)) + $minimum, 0)\t)",
+        "payloadType": "jsonata",
+        "x": 230,
+        "y": 560,
+        "wires": [
+            [
+                "360e41fd75081a50"
+            ]
+        ]
+    },
+    {
+        "id": "062e4465984b0876",
+        "type": "ui_chart",
+        "z": "d5eec157295204f4",
+        "name": "",
+        "group": "a5e2887b0d127a72",
+        "order": 2,
+        "width": 8,
+        "height": 7,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "30",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 910,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c416b62bfd03774e",
+        "type": "ui_spacer",
+        "z": "d5eec157295204f4",
+        "name": "spacer",
+        "group": "a5e2887b0d127a72",
+        "order": 6,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "fcb7eba766762a75",
+        "type": "ui_group",
+        "name": "Roaster1",
+        "tab": "2211defc230bb008",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "67f9ce7ba9814c9f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a5e2887b0d127a72",
+        "type": "ui_group",
+        "name": "Roaster2",
+        "tab": "2211defc230bb008",
+        "order": 2,
+        "disp": true,
+        "width": 16,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2211defc230bb008",
+        "type": "ui_tab",
+        "name": "P306",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]

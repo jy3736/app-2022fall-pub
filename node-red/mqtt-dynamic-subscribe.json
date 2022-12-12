@@ -1,0 +1,190 @@
+[
+    {
+        "id": "c9449b8390438fa2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a4f04e472a743994",
+        "type": "comment",
+        "z": "c9449b8390438fa2",
+        "name": "Broker: broker.hivemq.com:1883",
+        "info": "https://www.hivemq.com/public-mqtt-broker/",
+        "x": 230,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b641dd834b8c1d0f",
+        "type": "mqtt in",
+        "z": "c9449b8390438fa2",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0301dfa7f476f355",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 390,
+        "y": 180,
+        "wires": [
+            [
+                "5af9c8819e3b97a6"
+            ]
+        ]
+    },
+    {
+        "id": "c791a9ed35fa2343",
+        "type": "mqtt out",
+        "z": "c9449b8390438fa2",
+        "name": "",
+        "topic": "/stust/p306",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0301dfa7f476f355",
+        "x": 410,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9e629008815b4a95",
+        "type": "inject",
+        "z": "c9449b8390438fa2",
+        "name": "subscribe",
+        "props": [
+            {
+                "p": "action",
+                "v": "subscribe",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "/stust/p306",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "b641dd834b8c1d0f"
+            ]
+        ]
+    },
+    {
+        "id": "be28ef1781489f1b",
+        "type": "inject",
+        "z": "c9449b8390438fa2",
+        "name": "unsubscribe",
+        "props": [
+            {
+                "p": "action",
+                "v": "unsubscribe",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "/stust/p306",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "b641dd834b8c1d0f"
+            ]
+        ]
+    },
+    {
+        "id": "5af9c8819e3b97a6",
+        "type": "debug",
+        "z": "c9449b8390438fa2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 600,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "11d067b61da3da1d",
+        "type": "inject",
+        "z": "c9449b8390438fa2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "(\t    $minimum := 1;\t    $maximum := 10;\t    $round(($random() * ($maximum-$minimum)) + $minimum, 0)\t)",
+        "payloadType": "jsonata",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "c791a9ed35fa2343"
+            ]
+        ]
+    },
+    {
+        "id": "0301dfa7f476f355",
+        "type": "mqtt-broker",
+        "name": "HIVEMQ",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

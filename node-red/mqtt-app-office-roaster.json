@@ -1,0 +1,1137 @@
+[
+    {
+        "id": "0698ebc603a66cd2",
+        "type": "tab",
+        "label": "MQTT Broker",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "22587221afe1e818",
+        "type": "tab",
+        "label": "Sample - Room",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2931b1cb81612be9",
+        "type": "tab",
+        "label": "Sample - Roaster",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "407a01e4.6b637",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1d81d06da5f37373",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "Times New Roman,Times,serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Lucida Sans Typewriter,Lucida Console,Monaco,monospace",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Lucida Sans Typewriter,Lucida Console,Monaco,monospace"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4bb6bec90b13d1d1",
+        "type": "ui_tab",
+        "name": "Sample Room",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "aa6be2b33ab8423d",
+        "type": "ui_group",
+        "name": "實驗室環境",
+        "tab": "4bb6bec90b13d1d1",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f7ebf76999763568",
+        "type": "ui_group",
+        "name": "咖啡烘豆機",
+        "tab": "4bb6bec90b13d1d1",
+        "order": 2,
+        "disp": true,
+        "width": 15,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bb1c062cf2030b75",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "aa6be2b33ab8423d",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e7c9741caadba9eb",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "aa6be2b33ab8423d",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "eb379f4a129c3f7e",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "aa6be2b33ab8423d",
+        "order": 10,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "168f8e7c6d53f348",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "aa6be2b33ab8423d",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "771c314ab68984ce",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "aa6be2b33ab8423d",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "5fdb11c9b87cc906",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "aa6be2b33ab8423d",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b61d188e99910e40",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "f7ebf76999763568",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ad3fcfd331856bfc",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "f7ebf76999763568",
+        "order": 7,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "5cfcb37efb04d803",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "f7ebf76999763568",
+        "order": 8,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "86fd170ebb5f70e2",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "f7ebf76999763568",
+        "order": 9,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "6e343ab9ed845ece",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "f7ebf76999763568",
+        "order": 10,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "625343e8f8fd775c",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "f7ebf76999763568",
+        "order": 12,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "8d8cb4a98756f87f",
+        "type": "ui_spacer",
+        "z": "2931b1cb81612be9",
+        "name": "spacer",
+        "group": "f7ebf76999763568",
+        "order": 14,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "2775d90f811d0f95",
+        "type": "comment",
+        "z": "0698ebc603a66cd2",
+        "name": "MQTT Server : broker.emqx.io",
+        "info": "",
+        "x": 200,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "960a655bed3691f1",
+        "type": "aedes broker",
+        "z": "0698ebc603a66cd2",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "fae90e948e29e6b9"
+            ],
+            [
+                "8954f20fdcb9ac25"
+            ]
+        ]
+    },
+    {
+        "id": "fae90e948e29e6b9",
+        "type": "debug",
+        "z": "0698ebc603a66cd2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 410,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8954f20fdcb9ac25",
+        "type": "debug",
+        "z": "0698ebc603a66cd2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 410,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ae74252040a9c1a7",
+        "type": "config",
+        "z": "0698ebc603a66cd2",
+        "name": "Initial Flow Variables",
+        "properties": [
+            {
+                "p": "power",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "p": "door",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "p": "window",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "p": "fire",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "p": "forever",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "active": true,
+        "x": 200,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8fe6629bcc1b586f",
+        "type": "function",
+        "z": "22587221afe1e818",
+        "name": "Room",
+        "func": "function delay(delayInms) {\n    return new Promise(resolve => {\n        setTimeout(() => {\n            resolve(2);\n        }, delayInms);\n    });\n}\n\nif (flow.get(\"door\") === undefined) {\n    flow.set(\"door\", 0)\n}\n\nif (flow.get(\"window\") === undefined) {\n    flow.set(\"window\", 0)\n}\n\nif (flow.get(\"fire\") === undefined) {\n    flow.set(\"fire\", 0)\n}\n\nmsg.payload = { \"temperature\": 25, \"humidity\": 60, \"fire\": 0, \"door\": 0, \"window\": 0 };\n\nfunction update_room() {\n    let room = msg.payload;\n\n    room.temperature += (room.temperature < 10) ? Math.floor((Math.random() * 2)) :\n        (room.temperature > 40) ? Math.floor((Math.random() * 2) * -1) :\n            Math.floor((Math.random() * 3) - 1);\n    room.humidity += (room.humidity < 30) ? Math.floor((Math.random() * 2)) :\n        (room.humidity > 80) ? Math.floor((Math.random() * 2) * -1) :\n            Math.floor((Math.random() * 3) - 1);\n    room.door = flow.get(\"door\");\n    room.window = flow.get(\"window\");\n    room.fire = flow.get(\"fire\");\n}\n\nfunction update_sensors() {\n    flow.set(\"door\",(Math.floor(Math.random()*100)<10)?1:0);\n    flow.set(\"window\",(Math.floor(Math.random()*100)<30)?1:0);\n    flow.set(\"fire\",(Math.floor(Math.random()*100)<5)?1:0);\n}\n\n\nasync function loop() {\n    while (flow.get(\"forever\")) {\n        await delay(1000);\n        update_room();\n        update_sensors();\n        node.send(msg);\n    }\n}\n\nloop();",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "96d3bfe86259869a"
+            ]
+        ]
+    },
+    {
+        "id": "91c1a3f390fe0a78",
+        "type": "inject",
+        "z": "22587221afe1e818",
+        "name": "Start Sim",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "9f2a29ed4e7b1203"
+            ]
+        ]
+    },
+    {
+        "id": "96d3bfe86259869a",
+        "type": "mqtt out",
+        "z": "22587221afe1e818",
+        "name": "",
+        "topic": "sample/room",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "407a01e4.6b637",
+        "x": 850,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "aa97363ff10c7360",
+        "type": "ui_button",
+        "z": "22587221afe1e818",
+        "name": "",
+        "group": "aa6be2b33ab8423d",
+        "order": 12,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "開始模擬",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "9f2a29ed4e7b1203"
+            ]
+        ]
+    },
+    {
+        "id": "bbadbcaf61de448f",
+        "type": "inject",
+        "z": "22587221afe1e818",
+        "name": "Pause Sim",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "471b8b104b315baa"
+            ]
+        ]
+    },
+    {
+        "id": "471b8b104b315baa",
+        "type": "function",
+        "z": "22587221afe1e818",
+        "name": "Pause",
+        "func": "flow.set(\"forever\",false);\n\nreturn {\"payload\":\"暫停\"};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 60,
+        "wires": [
+            [
+                "1ce4d9b9a81bc7cd"
+            ]
+        ]
+    },
+    {
+        "id": "ed943304e348398e",
+        "type": "ui_button",
+        "z": "22587221afe1e818",
+        "name": "",
+        "group": "aa6be2b33ab8423d",
+        "order": 14,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "暫停模擬",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "471b8b104b315baa"
+            ]
+        ]
+    },
+    {
+        "id": "2b1ba2aad525be99",
+        "type": "ui_template",
+        "z": "22587221afe1e818",
+        "group": "aa6be2b33ab8423d",
+        "name": "Sample Room CSS",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "format": "<style>\n\nbody.nr-dashboard-theme {\n    background-image: url(https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg);\n    background-repeat: no-repeat;\n    background-size: auto;\n}\n\n</style>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07592b20478d3f22",
+        "type": "mqtt in",
+        "z": "22587221afe1e818",
+        "name": "",
+        "topic": "sample/room",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "407a01e4.6b637",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "c33f354acdc40432"
+            ]
+        ]
+    },
+    {
+        "id": "c33f354acdc40432",
+        "type": "json",
+        "z": "22587221afe1e818",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 520,
+        "wires": [
+            [
+                "d1adb60680e35280",
+                "79d150337474e168",
+                "35651374f3b49a5c",
+                "782da54a971e3c4c",
+                "a671471635490ebe"
+            ]
+        ]
+    },
+    {
+        "id": "d1adb60680e35280",
+        "type": "ui_text",
+        "z": "22587221afe1e818",
+        "group": "aa6be2b33ab8423d",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "室內溫度",
+        "format": "{{msg.payload.temperature}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 560,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "79d150337474e168",
+        "type": "ui_text",
+        "z": "22587221afe1e818",
+        "group": "aa6be2b33ab8423d",
+        "order": 6,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "室內濕度",
+        "format": "{{msg.payload.humidity}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 560,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "35651374f3b49a5c",
+        "type": "ui_text",
+        "z": "22587221afe1e818",
+        "group": "aa6be2b33ab8423d",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "前門狀態",
+        "format": "{{msg.payload.door}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 560,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "782da54a971e3c4c",
+        "type": "ui_text",
+        "z": "22587221afe1e818",
+        "group": "aa6be2b33ab8423d",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "窗戶狀態",
+        "format": "{{msg.payload.window}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 560,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "a671471635490ebe",
+        "type": "ui_text",
+        "z": "22587221afe1e818",
+        "group": "aa6be2b33ab8423d",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "火災示警",
+        "format": "{{msg.payload.fire}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 560,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "1ce4d9b9a81bc7cd",
+        "type": "ui_text",
+        "z": "22587221afe1e818",
+        "group": "aa6be2b33ab8423d",
+        "order": 1,
+        "width": 10,
+        "height": 1,
+        "name": "",
+        "label": "狀態：",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 610,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9f2a29ed4e7b1203",
+        "type": "function",
+        "z": "22587221afe1e818",
+        "name": "sim",
+        "func": "flow.set(\"forever\",true);\n\nreturn {\"payload\":\"模擬中...\"};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "8fe6629bcc1b586f",
+                "1ce4d9b9a81bc7cd"
+            ]
+        ]
+    },
+    {
+        "id": "52b0f8b8700fa4aa",
+        "type": "function",
+        "z": "2931b1cb81612be9",
+        "name": "Coffee Roaster",
+        "func": "function delay(delayInms) {\n    return new Promise(resolve => {\n        setTimeout(() => {\n            resolve(2);\n        }, delayInms);\n    });\n}\n\nif (flow.get(\"power\") === undefined) {\n    flow.set(\"power\", false)\n}\n\nmsg.payload = {};\nmsg.payload.roaster = [{ \"bean\": 200, \"air\": 200}, { \"bean\": 200, \"air\": 200}];\n\nfunction update_roaster() {\n    let roaster = msg.payload.roaster;\n    for(let i=0; i<roaster.length; i++) {\n        roaster[i].bean+=Math.floor((Math.random() - 0.5) * 3);\n        roaster[i].air+=Math.floor((Math.random() - 0.5) * 3);\n    }\n}\n\nasync function loop() {\n    while(flow.get(\"power\")) {\n        await delay(1000);\n        update_roaster();\n        node.send(msg);\n    }\n    msg.payload.roaster = [{ \"bean\": 25, \"air\": 25}, { \"bean\": 25, \"air\": 25}];\n    node.send(msg);\n}\n\nloop();",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "ba6054cc5dcb3003"
+            ]
+        ]
+    },
+    {
+        "id": "ba6054cc5dcb3003",
+        "type": "mqtt out",
+        "z": "2931b1cb81612be9",
+        "name": "",
+        "topic": "sample/roaster",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "407a01e4.6b637",
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "01544291c247f719",
+        "type": "mqtt in",
+        "z": "2931b1cb81612be9",
+        "name": "",
+        "topic": "sample/roaster",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "407a01e4.6b637",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 540,
+        "wires": [
+            [
+                "df91e8bfc258ab7c"
+            ]
+        ]
+    },
+    {
+        "id": "df91e8bfc258ab7c",
+        "type": "json",
+        "z": "2931b1cb81612be9",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 540,
+        "wires": [
+            [
+                "75a597c5fd779ba5",
+                "dcbab433f520c05a",
+                "c62b7918ca77300e",
+                "d3177440dc1710a5"
+            ]
+        ]
+    },
+    {
+        "id": "a30274b85893171e",
+        "type": "inject",
+        "z": "2931b1cb81612be9",
+        "name": "Power On",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "36a80a15d708f8c5"
+            ]
+        ]
+    },
+    {
+        "id": "b33c605309ea0da3",
+        "type": "ui_button",
+        "z": "2931b1cb81612be9",
+        "name": "",
+        "group": "f7ebf76999763568",
+        "order": 11,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "開機",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "36a80a15d708f8c5"
+            ]
+        ]
+    },
+    {
+        "id": "035411fdd3f2905e",
+        "type": "inject",
+        "z": "2931b1cb81612be9",
+        "name": "Power Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "df233b42e734c4c4"
+            ]
+        ]
+    },
+    {
+        "id": "df233b42e734c4c4",
+        "type": "function",
+        "z": "2931b1cb81612be9",
+        "name": "Pause",
+        "func": "flow.set(\"power\",false);\n\nreturn {\"payload\":\"關機\"};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "f4119dc327faa624"
+            ]
+        ]
+    },
+    {
+        "id": "35c5bda14de25ca6",
+        "type": "ui_button",
+        "z": "2931b1cb81612be9",
+        "name": "",
+        "group": "f7ebf76999763568",
+        "order": 13,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "關機",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "df233b42e734c4c4"
+            ]
+        ]
+    },
+    {
+        "id": "f4119dc327faa624",
+        "type": "ui_text",
+        "z": "2931b1cb81612be9",
+        "group": "f7ebf76999763568",
+        "order": 1,
+        "width": 14,
+        "height": 1,
+        "name": "",
+        "label": "狀態：",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "36a80a15d708f8c5",
+        "type": "function",
+        "z": "2931b1cb81612be9",
+        "name": "Start",
+        "func": "flow.set(\"power\",true);\n\nreturn {\"payload\":\"啟動中...\"};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "f4119dc327faa624",
+                "52b0f8b8700fa4aa"
+            ]
+        ]
+    },
+    {
+        "id": "75a597c5fd779ba5",
+        "type": "ui_text",
+        "z": "2931b1cb81612be9",
+        "group": "f7ebf76999763568",
+        "order": 4,
+        "width": 9,
+        "height": 1,
+        "name": "",
+        "label": "烘豆機 1 (鍋爐溫度)：",
+        "format": "{{msg.payload.roaster[0].air}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 620,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "dcbab433f520c05a",
+        "type": "ui_text",
+        "z": "2931b1cb81612be9",
+        "group": "f7ebf76999763568",
+        "order": 5,
+        "width": 9,
+        "height": 1,
+        "name": "",
+        "label": "烘豆機 2 (豆子溫度)：",
+        "format": "{{msg.payload.roaster[1].bean}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 620,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c62b7918ca77300e",
+        "type": "ui_text",
+        "z": "2931b1cb81612be9",
+        "group": "f7ebf76999763568",
+        "order": 6,
+        "width": 9,
+        "height": 1,
+        "name": "",
+        "label": "烘豆機 2 (鍋爐溫度)：",
+        "format": "{{msg.payload.roaster[1].air}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 620,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d3177440dc1710a5",
+        "type": "ui_gauge",
+        "z": "2931b1cb81612be9",
+        "name": "烘豆機 1 (豆子溫度)",
+        "group": "f7ebf76999763568",
+        "order": 3,
+        "width": 6,
+        "height": 5,
+        "gtype": "donut",
+        "title": "烘豆機 1 (豆子溫度)",
+        "label": "°C",
+        "format": "{{msg.payload.roaster[0].bean}}",
+        "min": "25",
+        "max": "300",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "130",
+        "seg2": "190",
+        "className": "",
+        "x": 610,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8656e184b5cb9cab",
+        "type": "ui_template",
+        "z": "2931b1cb81612be9",
+        "group": "f7ebf76999763568",
+        "name": "",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "format": "<button ng-click=\"send({payload: 'button pressed'})\">Click me!</button>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "36a80a15d708f8c5"
+            ]
+        ]
+    },
+    {
+        "id": "4a3c4efcb70560a0",
+        "type": "ui_template",
+        "z": "2931b1cb81612be9",
+        "group": "aa6be2b33ab8423d",
+        "name": "",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\nbutton {\n  width: 100%;\n  background-color: yellow;\n  border: 2px solid black;\n  border-radius: 10px;\n}\n\nbutton:active {\n  background-color: orange;\n}\n\nbutton:hover {\n  background-color: green;\n  cursor: pointer;\n}\n\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 380,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    }
+]
